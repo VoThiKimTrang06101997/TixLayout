@@ -1,0 +1,143 @@
+.tix-movies{
+    .tix__container{
+        .row{
+            .col-2{
+                .tix-movies__col-2{
+                    border: 1px solid $color-gray-11;
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        text-decoration: none;
+                        padding: 20px;
+                        position: relative;
+                        transition: all .2s;
+                        background-color: $color-white-0;
+                        width: 100%;
+                        opacity: 0.5;
+                        img{
+                            width: 50px;
+                        }
+                        &:hover{
+                            opacity: 1;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            width: calc(100% - 40px);
+                            transform: translateX(-50%);
+                            border-bottom: 1px solid $color-white-0;
+                            border-color: $color-white-3;
+                        }
+                    }
+                    a.active{
+                        opacity: 1;
+                    }
+                }
+            }
+            .col-5{
+                border: 1px solid #ebebec;
+                .tix-movies__col-5{
+                    display: flex;
+                    justify-content: center;
+                    .tix-movies__container{
+                        .tix-movies__col-5{
+                            a{
+                                text-decoration: none;
+                                padding: 16px;
+                                padding-left: 0;
+                                position: relative;
+                                opacity: 0.5;
+                                background-color: $color-white-0;
+                                transition: all .3s;
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    border-bottom: 1px solid $color-white-0;
+                                    border-color: $color-white-3;
+                                }
+                                &:hover{
+                                    opacity: 1;
+                                }
+                                .tix-movies__container__content{
+                                    display: flex;
+                                    align-items: center;
+                                    .tix-movies__container__content-img{
+                                        margin-right: $mg-1;
+                                        img{
+                                            width: 50px;
+                                        }
+                                    }
+                                    .tix-movies__container__content-info{
+                                        @include styleText($color-black-0,$fs-1 + 1,$fw-normal);
+                                        .tix-movies__info-location{
+                                            @include styleText($color-gray-5,$fs-1 - 1, $fw-normal);
+                                            display: block;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            margin-bottom: 0;
+                                            width: 200px;
+                                        }
+                                        .showingDetailCinema{
+                                            @include styleText($color-red-0,$fs-1 - 1,$fw-normal)
+                                        }
+                                    }
+                                }
+                            }
+                            a.active{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    #bhd-cineplex-2{
+                        .bhd-cineplex__name{
+                            @include styleText($color-green-1,$fs-1 + 1, $fw-normal);
+                        }
+                    }
+                    #cns-2{
+                        .bhd-cineplex__name{
+                            @include styleText($color-pink-0,$fs-1 + 1, $fw-normal);
+                        }
+                    }
+                    #ddc-2{
+                        .bhd-cineplex__name{
+                            @include styleText($color-gray-6,$fs-1 + 1, $fw-normal);
+                        }
+                    }
+                    #mega-gs-2{
+                        .bhd-cineplex__name{
+                            @include styleText($color-yellow-0,$fs-1 + 1, $fw-normal);
+                        }
+                    }
+                    #lotte-cinema-2{
+                        .bhd-cineplex__name{
+                            @include styleText($color-red-2,$fs-1 + 1, $fw-normal);
+                        }
+                    }
+                }
+            }
+            .col-5{
+                #NoMovies{
+                    p{
+                        text-align: center;
+                        margin-top: $mg-2;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@include responsive("medium"){
+    .tix-movies{
+        .tix__container{
+            width: 90%;
+        }
+    }
+}

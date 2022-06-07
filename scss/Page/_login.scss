@@ -1,0 +1,117 @@
+.tix-login{
+    background-image: url(../img/bg-login.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    .signin{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-image: linear-gradient(to bottom,rgba(20,50,93,.9),rgba(8,22,48,.9));
+        box-shadow: 0 0 10px 0 $color-black-5;
+        border-radius: 6px;
+        text-align: center;
+        max-width: 360px;
+        .signin__container{
+            padding: 40px 32px 30px;
+            .signin__header{
+                margin-bottom: 90px;
+                img{
+                    width: 70%;
+                }
+            }
+            .signin__message{
+                margin-bottom: $mg-2;
+                p{
+                    @include styleText($color-white-0,$fs-0,$fw-normal);
+                }
+            }
+            .signin__facebook{
+                margin-bottom: $mg-1;           
+                a{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .signin__zalo{
+                margin-bottom: $mg-1;        
+                a{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .signin__google{
+                margin-bottom: $mg-1;        
+                a{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .signin__btn-close{
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                button{
+                    background: none;
+                    border: none;
+                    &:focus{
+                        outline: none;
+                    }
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@include responsive("medium"){
+    .tix-login{
+        .signin{
+            .signin__container{
+                .signin__header{
+                    margin-bottom: 50px;
+                    img{
+                        width: 80%;
+                    }
+                }
+                .signin__message{
+                    p{
+                        font-size: $fs-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("small"){
+    .tix-login{
+        .signin{
+            .signin__container{
+                .signin__header{
+                    img{
+                        width: 90%;
+                    }
+                    margin-bottom: 30px;
+                }
+                .signin__message{
+                    p{
+                        font-size: 9px;
+                    }
+                }
+            }
+        }
+    }
+}

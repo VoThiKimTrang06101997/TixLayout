@@ -1,0 +1,88 @@
+// variable color
+
+$color-white-0: #ffffff; // default
+$color-white-1: #efefef;
+$color-white-2: rgba(255, 255, 255, 0.95);
+$color-white-3: rgba(238, 238, 238, 0.88);
+
+$color-black-0: #000000; // default
+$color-black-1: rgba(0, 0, 0, 0);
+$color-black-2: rgba(0, 0, 0, 0.01);
+$color-black-3: rgba(0, 0, 0, 0.9);
+$color-black-4: rgba(0, 0, 0, 0.1);
+$color-black-5: rgba(0, 0, 0, 0.5);
+$color-black-6: rgba(0, 0, 0, 0.8);
+$color-black-7: #222222;
+$color-black-8: #333;
+
+$color-gray-0: #9b9b9b;
+$color-gray-1: #4a4a4a;
+$color-gray-2: #e8e8e8;
+$color-gray-3: #d8d8d8;
+$color-gray-4: rgb(85, 85, 85);
+$color-gray-5: #949494;
+$color-gray-6: #9c9c9c;
+$color-gray-7: rgba(246, 246, 246, 0.5);
+$color-gray-8: #c7c3da;
+$color-gray-9: #bbbbbb;
+$color-gray-10: #757575;
+$color-gray-11: #ebebec;
+$color-gray-12: #bcbaba;
+
+$color-red-0: #fb4226;
+$color-red-1: #fa5238;
+$color-red-2: #ca4137;
+
+$color-blue-0:  #3b5b99;
+$color-blue-1: rgba(12, 27, 54, 0.8);
+$color-blue-2: #1f2e46;
+$color-blue-gray: #727b8a;
+
+
+$color-green-0: #00ac4d;
+$color-green-1: #8bc541;
+$color-green-2: #108f3e;
+
+$color-pink-0: #df0d7a;
+
+$color-yellow-0: #e5a813;
+
+// variable font-size
+$fs-0: 15px; //default
+$fs-1: 13px;
+$fs-2: 20px;
+$fs-3: 24px;
+$fs-4: 36px;
+$fs-5: 40px;
+
+//variable margin
+$mg-0: 2px;
+$mg-1: 10px;
+$mg-2: 25px;
+
+//variable border-radius
+$border-radius: 2px;
+
+//variable padding
+$pd-0: 5px; //default
+$pd-1: 10px;
+$pd-2: 20px;
+
+//variable line-height
+$line-height-0: 1.43; //default
+
+//variable font-weight
+$fw-normal: normal;
+$fw-bold-0: 600;
+$fw-bold-1: 700;
+$fw-bold: bold;
+
+//break points
+$breakpoints:(
+    'extra-large': 1200px,
+    'large' : 992px,
+    'medium' : 768px,
+    'small' : 576px,
+)
+
+

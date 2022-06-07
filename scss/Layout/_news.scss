@@ -1,0 +1,142 @@
+.tix-news{
+    margin-top: 50px;
+    .tix__container{
+        .tix-news__title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            li{
+                list-style: none;
+                margin-right: 50px;
+                &:not(:first-child){
+                    transform: scale(1);
+                    transition: all .3s;
+                    &:hover{
+                        transform: scale(1.25);
+                    }
+                }
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+        .tix-news__content{
+            margin-bottom: $mg-1;
+            .row{
+                .tix-news__forEachCol{
+                    margin-bottom: $mg-2;
+                    .tix-news__img{
+                        margin-bottom: 10px;
+                        a{
+                            display: inline-block;
+                            width: 100%;
+                            text-decoration: none;
+                            img{
+                                width: 100%;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                    .tix-news__title{
+                        a{
+                            @include styleText($color-black-0,$fs-0+1,$fw-normal);
+                            display: inline-block;
+                            width: 100%;
+                            text-decoration: none;
+                            text-align: left;
+                            transition: all .3s;
+                            &:hover{
+                                color: $color-red-0;
+                            }
+                            p{
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                line-height: 20px;
+                                height: 39px;
+                                margin-bottom: $mg-1;
+                            }
+                        }
+                    }
+                    .tix-news__description{
+                        @include styleText($color-gray-1,$fs-1,$fw-normal);
+                        text-align: justify;
+                        line-height: 19px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        height: 55px;
+                    }
+                    .iconFbComments{
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        .iconFb, .iconComments{
+                            display: flex;
+                            align-items: center;
+                            margin-right: $mg-2;
+                            i{
+                                @include styleText($color-gray-12,$fs-0,$fw-normal);
+                                margin-right: $mg-1;
+                                transform: scale(1);
+                                transition: all .3s;
+                                    &:hover{
+                                    transform: scale(1.3);
+                                }
+                            }
+                            span{
+                                @include styleText($color-gray-12,$fs-1,$fw-normal);
+                            }
+                        }
+                    }
+                }
+                .tix-news__forLastCol{
+                    .tix-news__forLastCol-item{
+                        margin-bottom: $mg-1;
+                        a{
+                            display: flex;
+                            text-decoration: none;
+                            transition: all .3s;
+                            @include styleText($color-gray-1,$fs-1+1,$fw-normal);
+                            width: 100%;
+                            &:hover{
+                                color: $color-red-0;
+                            }
+                            img{
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 4px;
+                                margin-right: $mg-1
+                            }
+                            span{
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                line-height: 20px;
+                                width: 100%;
+                                height: 42px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btnSeeMoreNews{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@include responsive("small"){
+    .tix-news{
+        .tix__container{
+            width: 90%;
+        }
+    }
+}

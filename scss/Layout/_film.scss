@@ -1,0 +1,329 @@
+.tix-film{
+    padding-top: 70px;
+    .tix__container{
+        .tix-film__title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                list-style: none;
+                margin-right: 50px;
+                &:not(:first-child){
+                    transform: scale(1);
+                    transition: all .3s;
+                    &:hover{
+                        transform: scale(1.25);
+                    }
+                }
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+        .tix-film__largecontainer{
+            .tix-film__content-carousel{
+                .carousel-inner{
+                    .carousel-item{
+                        .tix-film__row{
+                            margin-top: $mg-2;
+                            .tix-film__content-col{
+                                a{
+                                    text-decoration: none;
+                                    .tix-film__smallcontainer{ 
+                                        transition: all .3s;
+                                        &:hover{
+                                            .tix-film__img{
+                                                opacity: 0.95;
+                                                .tix-film__btn-play{
+                                                    opacity: 1;
+                                                }
+                                            }
+                                            .tix-film__info{
+                                                .tix-film__namefilm{
+                                                    opacity: 0;
+                                                }
+                                                .tix-film__time{
+                                                    opacity: 0;
+                                                }
+                                                .tix-film__btn-buyticket{
+                                                    opacity: 1;
+                                                }
+                                            }
+                                        }
+                                        .tix-film__img{
+                                            position: relative;
+                                            opacity: 1;
+                                            img{
+                                                width: 100%;
+                                                border-radius: 4px;
+                                            }
+                                            .tix-film__rating{
+                                                position: absolute;
+                                                top: 10px;
+                                                right: 10px;
+                                                background-color: $color-blue-1;
+                                                border: 1px solid $color-blue-2;
+                                                border-radius: 4px;
+                                                padding: $pd-0 $pd-1;
+                                                text-align: center;
+                                                .tix-film__rating-point{
+                                                    @include styleText($color-white-0,$fs-0,$fw-bold-1);
+                                                    margin-bottom: 0;
+                                                }
+                                                .tix-film__rating-star{
+                                                    display: flex;
+                                                    img{
+                                                        max-width: 8px;
+                                                        vertical-align: middle;
+                                                    }
+                                                }
+                                            }
+                                            .tix-film__btn-play{
+                                                opacity: 0;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%,-50%);
+                                                &:hover{
+                                                    opacity: 0.7;
+                                                }
+                                                button{
+                                                    border: none;
+                                                    background-color: $color-black-5;
+                                                    width: 50px;
+                                                    height: 50px;
+                                                    border-radius: 50%;
+                                                    &:focus{
+                                                        outline: none;
+                                                    }
+                                                    i{
+                                                        font-size: $fs-0;
+                                                        color: $color-white-0;
+                                                        text-indent: 4px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .tix-film__info{
+                                            margin-top: $mg-1;
+                                            position: relative;
+                                            .tix-film__namefilm{
+                                                .tix-film__info-name{
+                                                    @include styleText($color-black-0,$fs-0 +1,$fw-bold-0);
+                                                    opacity: 1;
+                                                }
+                                            }
+                                            .tix-film__time{
+                                                margin-top: $mg-1;
+                                                opacity: 1;
+                                                span{
+                                                    @include styleText($color-gray-1,$fs-1,$fw-normal);
+                                                }
+                                            }
+                                            .tix-film__btn-buyticket{
+                                                opacity: 0;
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                width: 100%;
+                                                button{
+                                                    &:hover{
+                                                        background-color: $color-red-2;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .carousel-control-prev {
+                    transform: translateX(-100%);
+                    i{
+                        font-size: 50px;
+                        color: $color-black-5;
+                    }
+                }
+                .carousel-control-next{
+                    transform: translateX(100%);
+                    i{
+                        font-size: 50px;
+                        color: $color-black-5;
+                    }
+                }
+            }
+        }
+        .tix-film__formobile{
+           .tix-film__item{
+               margin-bottom: $mg-2;
+               a{
+                   text-decoration: none;
+                   .tix-film__content{
+                       position: relative;
+                       img{
+                            width: 100%;
+                            border-radius: 4px;
+                       }
+                       .tix-film__rating{
+                           position: absolute;
+                           top: 12px;
+                           right: 12px;
+                           text-align: center;
+                           background-color: $color-blue-1;
+                           border: 1px solid #1f2e46;
+                           border-radius: 4px;
+                           padding: $pd-0;
+                           .tix-film__rating-point{
+                               @include styleText($color-white-0,$fs-0,$fw-bold-1);
+                                margin-bottom: 0;
+                            }
+                            .tix-film__rating-star{
+                                display: flex;
+                                img{
+                                    vertical-align: middle;
+                                    max-width: 8px;
+                                }
+                            }
+                       }
+                       .tix-film__typeAge{
+                           position: absolute;
+                           bottom: 10px;
+                           left: 10px;
+                       }
+                   }
+               }
+           }
+           .tix-film__formobile-btn{
+               display: flex;
+               .tix-film__formobile-btn-seemore{
+                    margin: $mg-1 auto;    
+               }
+           }
+        }
+    }
+}
+
+// Responsive
+@include responsive("extra-large"){
+    .tix-film{
+        .tix__container{
+            .tix-film__formobile{
+                display: none;
+            }
+        }
+    }
+}
+
+@include responsive("large"){
+    .tix-film{
+        padding-top: 20px;
+        .tix__container{
+            .tix-film__largecontainer{
+                .tix-film__row{
+                    .tix-film__img{
+                        .tix-film__rating{
+                            top: 5px !important;
+                            right: 5px !important;
+                            padding: $pd-0 !important;
+                            border: none !important;
+                            p{
+                                font-size: $fs-1 - 3 !important;
+                            }
+                            .tix-film__rating-star{
+                                img{
+                                    max-width: 5px !important;
+                                }
+                            }
+                        }
+                    }
+                    .tix-film__info{
+                        .tix-film__namefilm{
+                            span{
+                                font-size: $fs-1 !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .tix-film__formobile{
+                display: none;
+            }
+        }
+    }
+}
+
+@include responsive("medium"){
+    .tix-film{
+        padding-top: 20px;
+        .tix__container{
+            .tix-film__largecontainer{
+                .tix-film__row{
+                    .tix-film__img{
+                        .tix-film__rating{
+                            top: 5px !important;
+                            right: 5px !important;
+                            padding: $pd-0 - 2 !important;
+                            border: none !important;
+                            p{
+                                font-size: $fs-1 - 5 !important;
+                            }
+                            .tix-film__rating-star{
+                                img{
+                                    max-width: 5px !important;
+                                }
+                            }
+                        }
+                    }
+                    .tix-film__info{
+                        .tix-film__namefilm{
+                            span{
+                                font-size: $fs-1 - 3 !important;
+                                &:first-child{
+                                    margin-right: 2px !important;
+                                }
+                            }
+                        }
+                        .tix-film__time{
+                            margin-top: 3px !important;
+                            span{
+                                font-size: $fs-1 - 3 !important;
+                            }
+                        }
+                    }
+                }
+                .carousel-control-prev , .carousel-control-next{
+                    i{
+                        font-size: 30px !important;
+                    }
+                }
+            }
+            .tix-film__formobile{
+                display: none;
+            }
+        }
+    }
+}
+
+@include responsive("small"){
+    .tix-film{
+        padding-top: 100px;
+        .tix__container{
+            width: 95%;
+            .tix-film__title{
+                li{
+                    a{
+                        font-size: 18px !important;
+                    }
+                }
+            }
+            .tix-film__largecontainer{
+                display: none;
+            }
+            .tix-film__formobile{
+                display: block;
+            }
+        }
+    }
+}

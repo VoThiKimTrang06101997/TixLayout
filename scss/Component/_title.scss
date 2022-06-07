@@ -1,0 +1,17 @@
+.title__active{
+    @include styleText($color-red-1,$fs-3,$fw-normal);
+    line-height: 24px;
+    height: 24px;
+    &:hover{
+        color: $color-red-1;
+    }
+}
+
+.title__no-active{
+    @include styleText($color-black-0,$fs-2,$fw-normal);
+    line-height: 24px;
+    height: 24px;
+    &:hover{
+        color: $color-black-0;
+    }
+}
